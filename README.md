@@ -45,7 +45,7 @@ If the keyword and the destination file was not set yet, the application will wa
 
 
 
-Encryption process
+### Encryption process
 
 * The application uses only one loop for the whole encryption therefore the running time is O(n). This loop is needed to go through every character. 
 
@@ -53,10 +53,10 @@ Encryption process
 
 
 
-The encrypter
+### The encrypter
 
 
-If text is encrypted:
+#### If text is encrypted:
 
 * The encrypter will go through the characters one by one. Convert it to upper case and strip if it is not a letter.
 
@@ -64,11 +64,11 @@ If text is encrypted:
 
 
 
-If it is a URL or a file:
+#### If it is a URL or a file:
 
-	The encrypter opens the file/URL buffers in 1048576 bytes at a time and loop the content byte by byte.
-        If the byte is a lover case or uppercase character or a space, it converts the byte.
- 	Once the encryoter encrypted a byte, it writes into a file straight away. (There is a buffered writer with the size of 1048576)
+The encrypter opens the file/URL buffers in 1048576 bytes at a time and loop the content byte by byte.
+If the byte is a lover case or uppercase character or a space, it converts the byte.
+Once the encryoter encrypted a byte, it writes into a file straight away. (There is a buffered writer with the size of 1048576)
 
 
 
